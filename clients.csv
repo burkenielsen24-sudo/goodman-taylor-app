@@ -1,0 +1,2 @@
+id,name,email,phone,preferred_contact,timeline,address,source,tags,optin_email,optin_sms,status,notes
+sample1,Jane Doe,jane@example.com,5551234567,Email,0-3 months,123 Main St,Website,WarmLead,True,False,New,Interested in staging

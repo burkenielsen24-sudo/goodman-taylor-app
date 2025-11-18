@@ -1,0 +1,3 @@
+id,name,email,phone,preferred_contact,timeline,address,source,tags,optin_email,optin_sms,status,notes
+sample1,Jane Doe,jane@example.com,5551234567,Email,0-3 months,123 Main St,Website,WarmLead,True,False,New,Interested in staging
+sample2,John Smith,john@example.com,5559876543,Phone,3-6 months,456 Oak Ave,Referral,NeedsStaging,False,True,New,Has a rental propertya795e2da0e514ec4b5a9b59a733cf5ba,sample lead,samplelead@nothing.com,555555555,Phone,0-3 months,,Website,,False,True,New,(this is a test)

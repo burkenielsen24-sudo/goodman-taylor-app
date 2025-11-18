@@ -1,0 +1,24 @@
+# repair_clients_csv.py
+import pandas as pd
+import csv
+import os
+
+CLIENTS_CSV = os.path.join("data", "clients.csv")
+BACKUP = os.path.join("data", "clients_repaired_backup.csv")
+
+if os.path.exists(CLIENTS_CSV):
+    os.replace(CLIENTS_CSV, BACKUP)  # move original to backup
+    try:
+        # read while skipping malformed lines
+        df = pd.read_csv(BACKUP, dtype=str, on_bad_lines='skip')
+        # ensure columns match expected schema if present
+        expected = ["id","name","email","phone","preferred_contact","timeline","address","source","tags","optin_email","optin_sms","status","notes"]
+        # keep only expected columns, add missing ones
+        df = df.reindex(columns=[c for c in expected if c in df.columns] + [c for c in expected if c not in df.columns])
+        # write cleaned CSV with proper quoting
+        df.to_csv(CLIENTS_CSV, index=False, quoting=csv.QUOTE_MINIMAL)
+        print("Repaired clients.csv written. Original backed up as clients_repaired_backup.csv")
+    except Exception as e:
+        print("Repair failed:", e)
+else:
+    print("clients.csv not found.")

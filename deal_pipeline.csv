@@ -1,0 +1,3 @@
+id,name,stage,ticket_size,local_partner,country,expected_close,risk_score,tags,notes
+dp-1,AgriCo,Screening,250000,LocalImpact Ltd,Kenya,2026-03-15,7,agriculture,Scaling irrigation product
+dp-2,HealthApp,Sourced,150000,HealthBridge,Liberia,2026-06-01,6,healthcare,Early traction in capital

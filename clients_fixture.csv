@@ -1,0 +1,3 @@
+id,name,email,phone,preferred_contact,timeline,address,source,tags,optin_email,optin_sms,status,notes
+fixture-1,Alex Example,alex@example.com,+1 (555) 123-4567,Email,3-6 months,123 Main St,Website,WarmLead,True,False,New,Interested in staging
+fixture-2,Sam Sample,sam+test@example.org,555-987-6543,Phone,Just browsing,456 Oak Ave,Referral,NeedsStaging,False,True,New,Has a dog

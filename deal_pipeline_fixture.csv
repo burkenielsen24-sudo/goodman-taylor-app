@@ -1,0 +1,3 @@
+id,project_name,company_name,country,stage,lead_source,owner,ask_amount,currency,equity_offered,tags,impact_theme,created_at,notes
+0a1b2c3d4e,HealthyKidsClinic,Healthy Kids Clinic Ltd,KE,sourced,referral,alice@example.com,150000,USD,15,health,family-first,2025-11-01T10:00:00Z,"Community pediatric clinic focused on rural counties. Founder is local."
+1f2e3d4c5b,PetWashCo,PetWashCo LLC,UG,screening,direct,bob@example.com,50000,USD,20,pet-care,community,2025-11-12T14:15:00Z,"Subscription-based pet grooming in Kampala metro. Has pilot with 50 customers."
