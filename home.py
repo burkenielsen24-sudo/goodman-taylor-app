@@ -79,6 +79,15 @@ with col1:
     st.markdown("---")
     
     with st.container():
+        st.markdown("#### 📁 Document Management")
+        st.markdown("Manage term sheets, design gallery, and file uploads")
+        if st.button("🚀 Launch Documents", key="docs_app"):
+            st.info("Run: `streamlit run app/documents.py`")
+            st.code("python -m streamlit run app/documents.py", language="powershell")
+    
+    st.markdown("---")
+    
+    with st.container():
         st.markdown("#### 📊 Portfolio Analytics")
         st.markdown("Impact KPIs, metrics, and LP reporting")
         st.caption("⚠️ Coming soon")
@@ -110,6 +119,24 @@ with col2:
         if st.button("🚀 Launch Enrichment", key="enrichment_app"):
             st.info("Run: `streamlit run app/enrichment.py`")
             st.code("python -m streamlit run app/enrichment.py --server.port 8504", language="powershell")
+    
+    st.markdown("---")
+    
+    with st.container():
+        st.markdown("#### 🔒 Security Monitor")
+        st.markdown("PII scanning, schema validation, data sanitization")
+        if st.button("🚀 Launch Security", key="security_app"):
+            st.info("Run: `streamlit run app/security.py`")
+            st.code("python -m streamlit run app/security.py --server.port 8505", language="powershell")
+    
+    st.markdown("---")
+    
+    with st.container():
+        st.markdown("#### 📈 Portfolio Analytics")
+        st.markdown("Impact metrics, KPI tracking, LP reporting")
+        if st.button("🚀 Launch Analytics", key="analytics_app"):
+            st.info("Run: `streamlit run app/analytics.py`")
+            st.code("python -m streamlit run app/analytics.py --server.port 8506", language="powershell")
 
 # Additional Tools
 st.markdown("---")
@@ -118,7 +145,7 @@ st.markdown("## 🔧 Tools & Utilities")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("#### 🔒 Security Monitor")
+    st.markdown("#### 📋 CSV Repair")
     st.markdown("PII scan, schema validation, secrets detection")
     st.caption("⚠️ Coming soon")
 
