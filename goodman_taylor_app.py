@@ -6,7 +6,6 @@ import re
 import uuid
 import subprocess
 import io
-from tools.sanitize_clients import sanitize_clients
 
 st.set_page_config(page_title="Goodman-Taylor Studio", layout="wide")
 
@@ -163,7 +162,9 @@ if admin_ok:
     st.sidebar.markdown("### Sanitize / export")
     if os.path.exists(CLIENTS_CSV):
         try:
-            sanitized_df = sanitize_clients(CLIENTS_CSV)
+            # Inline PII sanitization - drop sensitive columns
+            df = pd.read_csv(CLIENTS_CSV)
+            sanitized_df = df.drop(columns=['name', 'email', 'phone', 'address'], errors='ignore')
             csv_bytes = sanitized_df.to_csv(index=False).encode("utf-8")
             st.sidebar.download_button("Download sanitized clients CSV", data=csv_bytes, file_name="clients_sanitized.csv")
         except Exception as e:
